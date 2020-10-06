@@ -25,14 +25,12 @@ ch = input("Enter your choice : ")
 num_1 = int(input("Enter first number : "))
 num_2 = int(input("Enter second number : "))
 
-if ch == "1":
-    add(num_1, num_2)
-elif ch == "2":
-    sub(num_1, num_2)
-elif ch == "3":
-    mul(num_1, num_2)
-elif ch == "4":
-    div(num_1, num_2)
-else:
-    print("Invalid Choice")
+operations = {
+    "1" : add,
+    "2" : sub,
+    "3" : mul,
+    "4" : div
+}
+
+operations.get(ch)(num_1, num_2)
 
